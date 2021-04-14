@@ -19,9 +19,12 @@ class CreateClientService {
   }: IClient): Promise<Client> {
     const clientRepository = getCustomRepository(ClientRepository);
     const clientEmailExists = await clientRepository.findByEmail(email);
-    const clientCpfExists = await clientRepository.findByCpf(email);
-    if (!clientCpfExists || !clientEmailExists) {
-      throw new AppError('Error, Email ou Cpf  já cadastratos ');
+    const clientCpfExists = await clientRepository.findByCpf(cpf);
+    if (clientCpfExists) {
+      throw new AppError('cpf de cliente ja cadastrado');
+    }
+    if (clientEmailExists) {
+      throw new AppError('email de cliente ja cadastrado');
     }
     const client = clientRepository.create({
       nome,
