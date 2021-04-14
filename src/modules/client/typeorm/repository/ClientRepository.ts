@@ -3,7 +3,7 @@ import Client from '../entities/Client';
 
 @EntityRepository(Client)
 class ClientRepository extends Repository<Client> {
-  public async FindByEmail(email: string): Promise<Client | undefined> {
+  public async findByEmail(email: string): Promise<Client | undefined> {
     const client = await this.findOne({
       where: {
         email,
@@ -12,7 +12,7 @@ class ClientRepository extends Repository<Client> {
     return client;
   }
 
-  public async FindByCpf(cpf: string): Promise<Client | undefined> {
+  public async findByCpf(cpf: string): Promise<Client | undefined> {
     const client = await this.findOne({
       where: {
         cpf,
