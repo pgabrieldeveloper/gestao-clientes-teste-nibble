@@ -1,7 +1,6 @@
 import CreateAddressService from '../../../modules/address/services/CreateAddressService';
 import AppError from '../../../shared/errors/AppError';
 import { getCustomRepository } from 'typeorm';
-import Client from '../typeorm/entities/Client';
 import ClientRepository from '../typeorm/repository/ClientRepository';
 interface IAddres {
   id: string;
@@ -20,7 +19,6 @@ class AddAdressService {
     bairro,
     cep,
     cidade,
-
     complemento,
     endereco_primario,
     estado,
