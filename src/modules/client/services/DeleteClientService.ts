@@ -1,7 +1,6 @@
 import AppError from '../../../shared/errors/AppError';
 import { getCustomRepository } from 'typeorm';
 import ClientRepository from '../typeorm/repository/ClientRepository';
-import Client from '../typeorm/entities/Client';
 
 interface IClient {
   id: string;

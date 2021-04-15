@@ -27,7 +27,6 @@ class UpdateClientService {
     if (!client) {
       throw new AppError('cliente não encontrado', 404);
     }
-
     if (clientEmailExists && email !== client.email) {
       throw new AppError('Email ja cadastrado');
     }
