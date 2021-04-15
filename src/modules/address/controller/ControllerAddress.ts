@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import DeleteAdressSercice from '../services/DeleteAdressSercice';
 import UpdataAddressService from '../services/UpdataAddressService';
 
-class AddressController {
+class ControllerAddress {
   public async update(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
     const {
@@ -37,4 +37,4 @@ class AddressController {
   }
 }
 
-export default new AddressController();
+export default new ControllerAddress();
