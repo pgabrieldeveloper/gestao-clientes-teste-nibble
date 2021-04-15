@@ -37,6 +37,7 @@ class UpdateClientService {
     client.cpf = cpf;
     client.telefone = telefone;
     client.email = email;
+    await clientRepository.save(client);
     return client;
   }
 }
