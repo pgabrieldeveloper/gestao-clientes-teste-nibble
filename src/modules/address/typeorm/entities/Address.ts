@@ -36,7 +36,7 @@ class Address {
   tipo: string;
 
   @Column()
-  endereco_tipo: boolean;
+  endereco_primario: boolean;
 
   @CreateDateColumn()
   created_at: Date;
