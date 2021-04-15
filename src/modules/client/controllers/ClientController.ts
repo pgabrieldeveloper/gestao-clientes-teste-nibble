@@ -23,6 +23,10 @@ class ClientController {
     const client = await ShowClientService.execute({ id });
     return res.status(200).json(client);
   }
+  public async list(req: Request, res: Response): Promise<Response> {
+    const clients = await ListClientService.execute();
+    return res.status(200).json(clients);
+  }
   public async findEmail(req: Request, res: Response): Promise<Response> {
     const { email } = req.params;
     const client = await FindByEmailClientService.execute({ email });
@@ -33,10 +37,7 @@ class ClientController {
     const client = await FindByCpfClientService.execute({ cpf });
     return res.status(200).json(client);
   }
-  public async list(req: Request, res: Response): Promise<Response> {
-    const clients = await ListClientService.execute();
-    return res.json(200).json(clients);
-  }
+
   public async update(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
     const { nome, cpf, telefone, email } = req.body;

@@ -6,7 +6,6 @@ class ListClientService {
   public async execute(): Promise<Client[]> {
     const clientRepository = getCustomRepository(ClientRepository);
     const clients = await clientRepository.find();
-
     return clients;
   }
 }

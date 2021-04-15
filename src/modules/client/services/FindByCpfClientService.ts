@@ -10,7 +10,7 @@ interface IClient {
 class FindByCpfClientService {
   public async execute({ cpf }: IClient): Promise<Client> {
     const clientRepository = getCustomRepository(ClientRepository);
-    const client = await clientRepository.findByEmail(cpf);
+    const client = await clientRepository.findByCpf(cpf);
     if (!client) {
       throw new AppError('cliente não encontrado', 404);
     }
