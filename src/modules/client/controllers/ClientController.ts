@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import AddAdressService from '../services/AddAdressService';
 import CreateClientService from '../services/CreateClientService';
 import DeleteClientService from '../services/DeleteClientService';
 import FindByCpfClientService from '../services/FindByCpfClientService';
@@ -9,12 +10,35 @@ import UpdateClientService from '../services/UpdateClientService';
 
 class ClientController {
   public async create(req: Request, res: Response): Promise<Response> {
-    const { nome, cpf, telefone, email } = req.body;
+    const {
+      nome,
+      cpf,
+      telefone,
+      email,
+      bairro,
+      cep,
+      cidade,
+      complemento,
+      endereco_primario,
+      estado,
+      numero,
+      rua,
+      tipo,
+    } = req.body;
     const client = await CreateClientService.execute({
       nome,
       cpf,
       telefone,
       email,
+      bairro,
+      cep,
+      cidade,
+      complemento,
+      endereco_primario,
+      estado,
+      numero,
+      rua,
+      tipo,
     });
     return res.status(201).json(client);
   }
@@ -53,6 +77,33 @@ class ClientController {
   public async delete(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
     await DeleteClientService.execute({ id });
+    return res.status(204).json([]);
+  }
+  public async addAddress(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+    const {
+      bairro,
+      cep,
+      cidade,
+      complemento,
+      endereco_primario,
+      estado,
+      numero,
+      rua,
+      tipo,
+    } = req.body;
+    await AddAdressService.execute({
+      bairro,
+      cep,
+      cidade,
+      complemento,
+      endereco_primario,
+      estado,
+      id,
+      numero,
+      rua,
+      tipo,
+    });
     return res.status(204).json([]);
   }
 }

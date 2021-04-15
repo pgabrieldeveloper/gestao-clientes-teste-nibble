@@ -10,5 +10,6 @@ clientRoutes.put('/:id', ClientController.update);
 clientRoutes.get('/email/:email', ClientController.findEmail);
 clientRoutes.get('/cpf/:cpf', ClientController.findCpf);
 clientRoutes.delete('/:id', ClientController.delete);
+clientRoutes.post('/address/:id', ClientController.addAddress);
 
 export default clientRoutes;
