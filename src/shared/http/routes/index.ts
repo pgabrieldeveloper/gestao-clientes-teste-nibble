@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import addressRoutes from 'src/modules/address/routes/address.routes';
+import addressRoutes from '../../../modules/address/routes/address.routes';
 import clientRoutes from '../../../modules/client/routes/client.routes';
 
 const routes = Router();
