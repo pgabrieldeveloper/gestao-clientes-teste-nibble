@@ -20,9 +20,9 @@
     cli: {<br>
     migrationsDir: './src/shared/typeorm/migrations',<br>
     },<br>
-</p><br>
-<p>Para:</p><br>
-<p><br>
+</p>
+<p>Para:</p><
+<p>
     module.exports = {<br>
     type: 'postgres',<br>
     url: process.env.DATABASE_URL,<br>
