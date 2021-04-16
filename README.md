@@ -1,6 +1,6 @@
 <h1>Avaliação nibble</h1>
 
- <h2>Link do projeto em deploy no heroku: <a src="https://gestao-nibble.herokuapp.com/"> Clique aqui </a> ! </h2>
+ <h2>Link do projeto em deploy no heroku: <a src="https://gestao-nibble.herokuapp.com/"> Clique aqui </a>!</h2>
  
  
 <p>Para testar a aplicação modo de desenvolvimento </p>
