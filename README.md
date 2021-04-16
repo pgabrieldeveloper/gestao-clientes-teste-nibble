@@ -7,35 +7,35 @@
 <p>Clone o projeto  depois modifique o arquivo "ormconfig.js" de :</p>
 
 <p>
-    module.exports = {
-    type: 'postgres',
-    url: process.env.DATABASE_URL,
-    extra: {
-    ssl: {
-    rejectUnauthorized: false,
-    },
-    },
-    entities: ['./dist/modules/**/typeorm/entities/*.js'],
-    migrations: ['./dist/shared/typeorm/migrations/*.js'],
-    cli: {
-    migrationsDir: './src/shared/typeorm/migrations',
-    },
-</p>
-<p>Para:</p>
-<p>
-    module.exports = {
-    type: 'postgres',
-    url: process.env.DATABASE_URL,
-    extra: {
-    ssl: {
-    rejectUnauthorized: false,
-    },
-    },
-    entities: ['./src/modules/**/typeorm/entities/*.ts'],
-    migrations: ['./src/shared/typeorm/migrations/*.ts'],
-    cli: {
-    migrationsDir: './src/shared/typeorm/migrations',
-    },
+    module.exports = { <br>
+    type: 'postgres', <br>
+    url: process.env.DATABASE_URL, <br>
+    extra: {<br>
+    ssl: {<br>
+    rejectUnauthorized: false,<br>
+    },<br>
+    },<br>
+    entities: ['./dist/modules/**/typeorm/entities/*.js'],<br>
+    migrations: ['./dist/shared/typeorm/migrations/*.js'],<br>
+    cli: {<br>
+    migrationsDir: './src/shared/typeorm/migrations',<br>
+    },<br>
+</p><br>
+<p>Para:</p><br>
+<p><br>
+    module.exports = {<br>
+    type: 'postgres',<br>
+    url: process.env.DATABASE_URL,<br>
+    extra: {<br>
+    ssl: {<br>
+    rejectUnauthorized: false,<br>
+    },<br>
+    },<br>
+    entities: ['./src/modules/**/typeorm/entities/*.ts'],<br>
+    migrations: ['./src/shared/typeorm/migrations/*.ts'],<br>
+    cli: {<br>
+    migrationsDir: './src/shared/typeorm/migrations',<br>
+    },<br>
 </p>
 
 <ul>
