@@ -2,6 +2,10 @@
 <h2>Back-end da aplicação </h2>
  <h2>Link do projeto em produção no heroku: "https://gestao-nibble.herokuapp.com/" </h2>
  
+ <h2>O email que recebe as notifações é o testenodemailer@gmail.com </h2>
+ <p> Para selecionar o email desejado que recebera as noticações de novos usuarios cadastradps</p>
+ <p>para altera o email bastar mudar o email na pastar ./src/modules/client/services/CreateClientService.ts</p>
+ 
  
 <p>Para testar a aplicação modo de desenvolvimento </p>
 <p>Clone o projeto  depois modifique o arquivo "ormconfig.js" de :</p>
