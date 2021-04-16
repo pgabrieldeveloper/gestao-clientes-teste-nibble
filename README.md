@@ -38,6 +38,8 @@
     },<br>
 </p>
 
+<p>Depois bastar dar o comando "yarn dev" </p>
+
 <ul>
   <strong>Rotas da aplicação</strong>
   <li>
