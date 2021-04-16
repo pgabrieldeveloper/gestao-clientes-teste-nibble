@@ -21,7 +21,7 @@
     migrationsDir: './src/shared/typeorm/migrations',<br>
     },<br>
 </p>
-<p>Para:</p><
+<p>Para:</p>
 <p>
     module.exports = {<br>
     type: 'postgres',<br>
